@@ -1,5 +1,9 @@
 package entities.abstracts;
 
+import entities.concretes.Honda;
+
+import java.util.List;
+
 public abstract class Cars {
 
     private String id;
@@ -7,6 +11,7 @@ public abstract class Cars {
     private boolean gear=false;
     private String fuelType;
     private double dailyPrice;
+    private boolean isActive = true;
 
 //    private String colour;
 //    private int km;
@@ -55,6 +60,21 @@ public abstract class Cars {
         this.dailyPrice = dailyPrice;
     }
 
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
+    public abstract void showAvailableCars(boolean isActive);
+    public abstract void showInAvailableCars(boolean isActive);
+
+
+
+
+
     @Override
     public String toString() {
         return "Cars{" +
@@ -65,5 +85,10 @@ public abstract class Cars {
                 ", dailyPrice=" + dailyPrice +
                 '}';
     }
+
+
+
+
+
 }
 

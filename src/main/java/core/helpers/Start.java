@@ -1,7 +1,7 @@
 package core.helpers;
 
-import business.concretes.HondaMenuService;
-import entities.concretes.Honda;
+import business.concretes.HondaMenuManager;
+import business.concretes.MenuManager;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ public class Start {
     public static void start(){
         Scanner inp = new Scanner(System.in);
 
-        HondaMenuService hondaMenuService = new HondaMenuService();
+        MenuManager menuManager = new MenuManager();
 
 
         int select;
@@ -28,7 +28,7 @@ public class Start {
 
             switch (select){
                 case 1:
-                    hondaMenuService.getSelectionMenu();
+                    menuManager.getSelectionMenu();
                     break;
                 case 2:
                     //müşreti kayıt

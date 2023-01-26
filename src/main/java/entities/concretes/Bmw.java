@@ -32,6 +32,16 @@ public class Bmw extends Cars {
     }
 
     @Override
+    public void showAvailableCars(boolean isActive) {
+
+    }
+
+    @Override
+    public void showInAvailableCars(boolean isActive) {
+
+    }
+
+    @Override
     public String toString() {
         return
                 "Id: " + getId() +

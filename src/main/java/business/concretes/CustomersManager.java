@@ -11,9 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class CustomersManager implements IdMaker {
+public class CustomersManager extends Customers  {
 
-    public static int counter = 1000;
+
 
     Customers customers = new Customers();
 
@@ -44,19 +44,13 @@ public class CustomersManager implements IdMaker {
         System.out.println("Başarıyla eklenmiştir...");
         String s ="Rezervasyon onay bölümüne yönlendiriliyorsunuz...\n";
         Slow.slowPrint(s,30);
+        System.out.println(registeredCustomerList);
     }
 
     public void addCustomer(){
         Customers customers1 = new Customers(customers.getTcNo(),customers.getAge(),customers.getId(),customers.getFirstName(),customers.getLastName());
+        registeredCustomerList.add(customers1);
     }
 
-    @Override
-    public String idMaker(String number) {
-        String suffix= "CUST";
 
-        number = number.substring(number.length()-3);
-
-        return suffix+number+counter;
-
-    }
 }

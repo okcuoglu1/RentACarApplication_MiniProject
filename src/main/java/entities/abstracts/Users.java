@@ -1,6 +1,10 @@
 package entities.abstracts;
 
-public abstract class Users {
+import core.helpers.IdMaker;
+import entities.concretes.Customers;
+
+public abstract class Users implements IdMaker {
+
 
 
     private String id;
@@ -12,7 +16,9 @@ public abstract class Users {
     }
 
     public void setId(String id) {
-        this.id = id;
+        Customers customers = new Customers();
+        customers.idMaker(id);
+
     }
 
     public String getFirstName() {
