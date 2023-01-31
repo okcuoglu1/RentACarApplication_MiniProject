@@ -11,14 +11,33 @@ public abstract class Cars {
     private boolean gear=false;
     private String fuelType;
     private double dailyPrice;
-    private boolean isActive = true;
+    private boolean isActive=true;
+    private String model;
 
-//    private String colour;
+    private String brandName;
+
+
+    //    private String colour;
 //    private int km;
 //    private int seat;
 //    private int door;
 //    private String ac;
+//    private boolean inMaintance=false;
+    public String getBrandName() {
+        return brandName;
+    }
 
+    public void setBrandName(String brandName) {
+        this.brandName = brandName;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
 
     public String getId() {
         return id;
@@ -68,27 +87,22 @@ public abstract class Cars {
         isActive = active;
     }
 
-    public abstract void showAvailableCars(boolean isActive);
-    public abstract void showInAvailableCars(boolean isActive);
-
-
-
-
-
     @Override
     public String toString() {
         return "Cars{" +
                 "id='" + id + '\'' +
+                ", brandName='" + brandName + '\'' +
+                ", model='" + model + '\'' +
                 ", modelYear=" + modelYear +
                 ", gear=" + gear +
                 ", fuelType='" + fuelType + '\'' +
                 ", dailyPrice=" + dailyPrice +
+                //", isActive =" + isActive +
                 '}';
     }
 
-
-
-
+    public abstract void showAvailableCars(boolean isActive);
+    public abstract void showSelectedCar(boolean isActive);
+    public abstract void showInactiveCars(boolean isActive);
 
 }
-

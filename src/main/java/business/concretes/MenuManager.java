@@ -21,8 +21,8 @@ public class MenuManager extends MenuService {
             HondaMenuManager hondaMenuManager = new HondaMenuManager();
             AudiMenuManager audiMenuService = new AudiMenuManager();
             BmwMenuManager bmwMenuService = new BmwMenuManager();
-            int select;
             Scanner inp = new Scanner(System.in);
+            int select;
             System.out.println("Lütfen kiralamak istediğiniz aracın markasını giriniz");
             System.out.println("1-Honda");
             System.out.println("2-Audi");
@@ -36,10 +36,14 @@ public class MenuManager extends MenuService {
                     break;
                 case 2:
                     audiMenuService.audiMenu();
+                    break;
                 case 3:
                     bmwMenuService.bmwMenu();
+                    break;
                 case 0:
                     Start.start();
+                default:
+                    System.out.println("Geçersiz Giriş");
             }
 
 

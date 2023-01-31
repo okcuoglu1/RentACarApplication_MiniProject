@@ -24,7 +24,7 @@ public class HondaMenuManager extends MenuManager {
         honda.fillHondaList();
         String select;
         honda.showAvailableCars(true);
-        honda.showInAvailableCars(false);
+        //honda.showInAvailableCars(false);
         System.out.println("========================");
         System.out.println("Rezervasyon işlemini bitirmek için 'Q', devam etmek için herhangi bir tuşa basınız");
         select = inp.nextLine();

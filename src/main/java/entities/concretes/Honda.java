@@ -33,18 +33,7 @@ public class Honda extends Cars {
         this.model = model;
     }
 
-    @Override
-    public String toString() {
-        return
-                "Id: " + getId() +
-                        ", Model: " + getModel() +
-                        ", Model Year: " + getModelYear() +
-                        ", Automatic Gear: " + isGear() +
-                        ", Fuel Type: " + getFuelType() +
-                        ", Daily Price: " + getDailyPrice() +
-                        ", Is Active : " + isActive();
 
-    }
 
     public void fillHondaList() {
 
@@ -105,6 +94,18 @@ public class Honda extends Cars {
 
     }
 
+    @Override
+    public String toString() {
+        return
+                "Id: " + getId() +
+                        ", Model: " + getModel() +
+                        ", Model Year: " + getModelYear() +
+                        ", Automatic Gear: " + isGear() +
+                        ", Fuel Type: " + getFuelType() +
+                        ", Daily Price: " + getDailyPrice() +
+                        ", Is Active : " + isActive();
+
+    }
 
 
 }

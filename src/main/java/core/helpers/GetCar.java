@@ -22,7 +22,7 @@ Scanner inp = new Scanner(System.in);
                     System.out.printf("%-7s  %-10s  %-10s  %-10s  %-14s  %-10s %-15s\n","-----","-----","--","----------","--------------","----------","------------");
                     System.out.printf("%-7s  %-10s  %-10s  %-10s  %-14s  %-10s $%-14s\n","Honda",w.getModel(),w.getId(),w.getModelYear(),w.isGear(),w.getFuelType(),w.getDailyPrice());
                     //reservationManager.reservertCars.add(w);
-                    honda.hondaList.remove(w);
+                    //honda.hondaList.remove(w);
                     flag++;
                     break;
                 }
